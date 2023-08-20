@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DayOut</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <style>
+    .custom-container {
+      background-image: url("images/leaves1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light  navbar-dark " style="background-color: rgb(179, 73, 200);">
+    <div class="container-fluid"
+      style="font-family:Georgia, 'Times New Roman', Times, serif;color: rgb(254, 162, 248);">
+      <a class="navbar-brand" href="#">ALL DAY OUT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"
+        style="font-family:Georgia, 'Times New Roman', Times, serif;color: rgb(254, 162, 248);">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search"
+          style="background-color: rgb(247, 163, 233);font-family:Georgia, 'Times New Roman', Times, serif">
+          <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn" type="submit" id="submit" style="color: white; border: white; ">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid position-relative custom-container"
+    style="width: 100%; height: 950px; padding: 0px; margin: 0px 0px 0px 0px;font-family:Georgia, 'Times New Roman', Times, serif">
+    <h1 class="text-center"
+      style="color: rgb(252, 232, 243); font-family:Georgia, 'Times New Roman', Times, serif;font-size: 60px;padding: 50px;">
+      Weather for <span id="cityName"></span></h1>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 text-center mx-auto" style="margin-right: 0;">
+        <div class="col">
+          <div class="card  rounded-3 shadow-sm" style="background-color: rgb(250, 97, 184);">
+            <div class="card-header py-3" style="font-family:Georgia, 'Times New Roman', Times, serif">
+              <h4 class="my-0 fw-normal" style="font-family:Georgia, 'Times New Roman', Times, serif">Temperatures</h4>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 176, 223);">
+              <h1 class="card-tittle pricing-card-title"><span id="temp2"></span><small class="text-muted fw-light">
+                  Deg</small> </h1>
+              <ul class="list-unstyled mt-3 ">
+                <li>Temperature is <span id="temp"></span></li>
+                <li>Min_temp is <span id="min_temp"></span></li>
+                <li>Max_temp is <span id="max_temp"></span></li>
+              </ul>
+              <!-- <button type="button" class="w-100 btn btn-lg btn-outline-dark">Sign up for free</button> -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm" style="background-color: rgb(250, 97, 184);">
+            <div class="card-header py-3" style="font-family:Georgia, 'Times New Roman', Times, serif">
+              <h4 class="my-0 fw-normal" style="font-family:Georgia, 'Times New Roman', Times, serif"> Humidity Info
+              </h4>
+            </div>
+            <div class="card-body"
+              style="background-color: rgb(252, 176, 223);font-family:Georgia, 'Times New Roman', Times, serif">
+              <h1 class="card-tittle pricing-card-title"><span id="humidity2"></span><small class="text-muted fw-light">
+                  %</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Humidity is <span id="humidity"></span></li>
+                <li>Wind_degrees is <span id="wind_degrees"></span></li>
+                <li>Feels_like is <span id="feels_like"></span></li>
+              </ul>
+              <!-- <button type="button" class="w-100 btn btn-lg btn-dark">Get started</button> -->
+            </div>
+          </div>
+        </div>
+        <div class="col" style="font-family:Georgia, 'Times New Roman', Times, serif">
+          <div class="card  rounded-3 shadow-sm">
+            <div class="card-header " style="background-color: rgb(250, 97, 184);">
+              <h4 class="fw-normal" style="font-family:Georgia, 'Times New Roman', Times, serif">Wind Info</h4>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 176, 223);">
+              <h1 class="card-tittle pricing-card-title"><span id="wind_speed2"></span><small
+                  class="text-muted fw-light"> km/hr</small>
+              </h1>
+              <ul class="list-unstyled ">
+                <li>Wind_speed is <span id="wind_speed"></span></li>
+                <li>Sunrise is <span id="sunrise"></span></li>
+                <li>Sunset is <span id="sunset"></span></li>
+                <li>Cloud_pct is <span id="cloud_pct"></span></li>
+
+              </ul>
+            </div>
+            <!-- <button type="button" class="w-100 btn btn-lg btn-dark">Contact us</button> -->
+          </div>
+        </div>
+      </div>
+  </div>
+  <footer class="footer  p-2"
+    style="background-color: rgb(179, 73, 200);font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(254, 162, 248);">
+    <h6 style="color: aliceblue;">Designed And Developed By :<a href="https://github.com/riyab03" alt="visit profile"
+        style="color: rgb(250, 249, 249);"> RIYA BISHT</a></strong></h6>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
